@@ -8,8 +8,13 @@ We were required to implement the following interfaces: <br>
 2. GraphAlgoInterface - GraphAlgo <br>
 
 **Node** <br>
-for the implemention we implement an inner calss: "Node". This class represents a vertex in a directional weighted graph. <br>
-for each node we save this information: its unique id, its position(x,y), and we make another field "tag" for computing needs. <br>
+for the implemention we implement a calss: "Node". This class represents a vertex in a directional weighted graph. <br>
+for each node we save this information: <br>
+-its unique id <br>
+-its position(x,y) <br>
+-the number of the edges which are going out of this node <br>
+-the number of the edges which are going into this node <br>
+-"tag" for computing needs. <br>
 
 **GraphInterface  - DiGraph:** <br>
 this interface represents a Directional Weighted Graph: <br>
@@ -25,8 +30,8 @@ in other words, key is the node dest and its value is all the edge which go into
 **GraphAlgoInterface - GraphAlgo** <br>
 This interface represents a Directed (positive) Weighted Graph Theory Algorithms including: <br>
 1. shortestPath: <br>
- we implement this method by using Dijkstra algorithm for finding the shortest path between two nodes so the sum of edge weight is minimal. <br>
+Returns the shortest path from node id1 to node id2 using Dijkstra's Algorithm. <br>
 2. center <br> 
 this method finds the Node which minimizes the max distance to all the other nodes  <br> 
 3. tsp <br>
-  we used a greedy algorithem which compute the shortest path by Dijkstra algorithm. <br>
+Finds the shortest path that visits all the nodes in the list. <br>
